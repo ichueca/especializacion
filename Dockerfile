@@ -1,0 +1,6 @@
+FROM openjdk:11
+ENV JAVA_APP_JAR ms-productos-0.0.1-SNAPSHOT.jar
+WORKDIR /app/
+COPY target/$JAVA_APP_JAR .
+EXPOSE 8001
+CMD java $JAVA_OPTIONS -jar $JAVA_APP_JAR
